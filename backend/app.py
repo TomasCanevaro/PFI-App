@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import joblib
 import pandas as pd
 from datetime import datetime
@@ -6,6 +7,7 @@ import os
 
 # Inicializar Flask
 app = Flask(__name__)
+CORS(app)  # Permite que React (localhost:5173) llame al backend
 
 # Cargar el modelo entrenado
 modelo = joblib.load("modelo_randomforest_politicas.pkl")
