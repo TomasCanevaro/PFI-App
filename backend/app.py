@@ -79,6 +79,14 @@ def save():
 
     return jsonify({"mensaje": "Registro guardado correctamente"})
 
+@app.route("/history", methods=["GET"])
+def history():
+    if not os.path.exists(HISTORIAL_FILE):
+        return jsonify([])
+
+    df = pd.read_csv(HISTORIAL_FILE)
+    return jsonify(df.to_dict(orient="records"))
+
 # --- Ejecutar Flask ---
 if __name__ == "__main__":
     app.run(debug=True)

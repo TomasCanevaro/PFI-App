@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [objetivo, setObjetivo] = useState("");
   const [grupo, setGrupo] = useState("");
   const [resultado, setResultado] = useState(null);
+  const [historial, setHistorial] = useState([]);
 
   const gruposDisponibles = [
     "Seguridad / TIC",
@@ -18,6 +19,16 @@ function App() {
     "Transporte / Obra pública",
     "Economía local / Subsidio"
   ];
+
+  useEffect(() => {
+    obtenerHistorial();
+  }, []);
+
+  const obtenerHistorial = async () => {
+    const res = await fetch("http://127.0.0.1:5000/history");
+    const data = await res.json();
+    setHistorial(data);
+  };
 
   const handlePredict = async (e) => {
     e.preventDefault();
@@ -34,6 +45,27 @@ function App() {
 
     const data = await res.json();
     setResultado(data);
+  };
+
+  const guardarResultado = async (resultadoReal) => {
+    if (!resultado) return;
+
+    await fetch("http://127.0.0.1:5000/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        "Objetivo principal": objetivo,
+        "Grupo": grupo,
+        "Prediccion": resultado.prediccion,
+        "Probabilidad_exito": resultado.probabilidad_exito,
+        "Resultado_real": resultadoReal
+      })
+    });
+
+    obtenerHistorial();
+    setResultado(null);
+    setObjetivo("");
+    setGrupo("");
   };
 
   return (
@@ -75,8 +107,38 @@ function App() {
             <h2>Resultado</h2>
             <p><strong>Predicción:</strong> {resultado.prediccion}</p>
             <p><strong>Probabilidad de éxito:</strong> {resultado.probabilidad_exito}%</p>
+            <div>
+              <button onClick={() => guardarResultado("Éxito")}>Marcar como Éxito</button>
+              <button onClick={() => guardarResultado("Fracaso")}>Marcar como Fracaso</button>
+            </div>
           </div>
         )}
+
+        <h2 className="historial-title">Historial</h2>
+        <table className="historial-table">
+          <thead>
+            <tr>
+              <th>Objetivo</th>
+              <th>Grupo</th>
+              <th>Predicción</th>
+              <th>Prob. Éxito</th>
+              <th>Resultado Real</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            {historial.map((item, idx) => (
+              <tr key={idx}>
+                <td>{item["Objetivo principal"]}</td>
+                <td>{item["Grupo"]}</td>
+                <td>{item["Prediccion"]}</td>
+                <td>{item["Probabilidad_exito"]}%</td>
+                <td>{item["Resultado_real"]}</td>
+                <td>{item["Fecha"]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

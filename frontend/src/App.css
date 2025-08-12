@@ -1,32 +1,23 @@
 body {
-  background-color: #bfbfbf; /* gris oscuro */
+  background-color: #bfbfbf;
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .container {
   min-height: 100vh;
-  display: flex;
-  justify-content: center; /* centro horizontal */
-  align-items: flex-start; /* lo dejamos arriba un poco */
   padding-top: 80px;
 }
 
 .form-wrapper {
-  background-color: gray;
+  background-color: rgb(177, 122, 122);
   padding: 30px 40px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   max-width: 600px;
   width: 100%;
+  margin: 0 auto;
   text-align: center;
-  margin: 0 auto; /* refuerzo del centrado */
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0b0c0c;
 }
 
 form {
@@ -39,12 +30,13 @@ label {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
-  text-align: left; /* mantiene alineado el texto de los labels */
+  text-align: left;
 }
 
 input, select {
   padding: 10px;
   font-size: 1rem;
+  background-color: #d2dacd;
   border: 2px solid #0b0c0c;
   border-radius: 0;
   width: 100%;
@@ -52,6 +44,7 @@ input, select {
 
 button {
   padding: 12px;
+  margin-left: 5px;
   background-color: #1d70b8;
   color: white;
   border: none;
@@ -65,12 +58,28 @@ button:hover {
 
 .result {
   margin-top: 20px;
-  background-color: #a38b72;
+  background-color: #d8a571;
   padding: 15px;
   border-left: 5px solid #1d70b8;
   text-align: left;
 }
 
-.result h2 {
-  margin-top: 0;
+.historial-title {
+  margin-top: 30px;
+}
+
+.historial-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-table th,
+.historial-table td {
+  border: 1px solid #d4b9b9;
+  padding: 8px;
+}
+
+.historial-table th {
+  background-color: #aa957f;
+  text-align: left;
 }
