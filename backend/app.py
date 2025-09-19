@@ -1,19 +1,28 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+import json
 import joblib
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 
 # Inicializar Flask
 app = Flask(__name__)
 CORS(app)  # Permite que React (localhost:5173) llame al backend
+bcrypt = Bcrypt(app)
+app.config["JWT_SECRET_KEY"] = "clave_secreta_super_segura"  # cambia esto en producción
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
+jwt = JWTManager(app)
 
 # Cargar el modelo entrenado
 modelo = joblib.load("modelo_randomforest_politicas.pkl")
 
 # Archivo donde guardaremos el historial
 HISTORIAL_FILE = "historial_politicas.csv"
+
+USERS_FILE = "usuarios.json"
 
 # Crear historial si no existe
 if not os.path.exists(HISTORIAL_FILE):
@@ -26,8 +35,52 @@ if not os.path.exists(HISTORIAL_FILE):
         "Fecha"
     ]).to_csv(HISTORIAL_FILE, index=False)
 
+def load_users():
+    if os.path.exists(USERS_FILE):
+        with open(USERS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def save_users(users):
+    with open(USERS_FILE, "w", encoding="utf-8") as f:
+        json.dump(users, f, indent=2, ensure_ascii=False)
+
+# Registro de usuario
+@app.route("/register", methods=["POST"])
+def register():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+
+    users = load_users()
+
+    if username in users:
+        return jsonify({"error": "Usuario ya existe"}), 400
+
+    hashed_pw = bcrypt.generate_password_hash(password).decode("utf-8")
+    users[username] = {"password": hashed_pw, "created_at": str(datetime.now())}
+    save_users(users)
+
+    return jsonify({"message": "Usuario registrado con éxito"}), 201
+
+# Login de usuario
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+
+    users = load_users()
+
+    if username not in users or not bcrypt.check_password_hash(users[username]["password"], password):
+        return jsonify({"error": "Credenciales inválidas"}), 401
+
+    token = create_access_token(identity=username)
+    return jsonify({"token": token, "username": username})
+
 # --- Endpoint de predicción ---
 @app.route("/predict", methods=["POST"])
+#@jwt_required()
 def predict():
     data = request.get_json()
 
@@ -53,6 +106,7 @@ def predict():
 
 # --- Endpoint para guardar resultado real ---
 @app.route("/save", methods=["POST"])
+#@jwt_required()
 def save():
     data = request.get_json()
 
@@ -80,6 +134,7 @@ def save():
     return jsonify({"mensaje": "Registro guardado correctamente"})
 
 @app.route("/history", methods=["GET"])
+#@jwt_required()
 def history():
     if not os.path.exists(HISTORIAL_FILE):
         return jsonify([])
