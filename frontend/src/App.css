@@ -139,3 +139,34 @@ button:hover {
 .page-container {
   padding: 20px;
 }
+
+.suggestion {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #aeb1bd; /* azul muy claro */
+  border-left: 6px solid #1e3a8a; /* barra lateral azul */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.suggestion h2 {
+  margin-top: 0;
+  color: #1e3a8a; /* azul principal */
+}
+
+.suggestion p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

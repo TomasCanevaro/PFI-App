@@ -6,6 +6,7 @@ function MainApp() {
   const [grupo, setGrupo] = useState("");
   const [resultado, setResultado] = useState(null);
   const [historial, setHistorial] = useState([]);
+  const [sugerencia, setSugerencia] = useState(null);
 
   const gruposDisponibles = [
     "Seguridad / TIC",
@@ -31,10 +32,11 @@ function MainApp() {
   };
 
   const handlePredict = async (e) => {
-    e.preventDefault();
-    setResultado(null);
+  e.preventDefault();
+  setResultado(null);
+  setSugerencia(null);
 
-    const res = await fetch("http://127.0.0.1:5000/predict", {
+  const res = await fetch("http://127.0.0.1:5000/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -45,6 +47,16 @@ function MainApp() {
 
     const data = await res.json();
     setResultado(data);
+
+    // 🔹 Pedir sugerencia al backend
+    const suggestRes = await fetch("http://127.0.0.1:5000/suggest", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ "Grupo": grupo })
+    });
+
+    const suggestData = await suggestRes.json();
+    setSugerencia(suggestData);
   };
 
   const guardarResultado = async (resultadoReal) => {
@@ -111,6 +123,15 @@ function MainApp() {
               <button onClick={() => guardarResultado("Éxito")}>Marcar como Éxito</button>
               <button onClick={() => guardarResultado("Fracaso")}>Marcar como Fracaso</button>
             </div>
+          </div>
+        )}
+
+        {sugerencia && (
+          <div className="suggestion">
+            <h2>Sugerencia de política</h2>
+            <p><strong>Objetivo:</strong> {sugerencia["Objetivo principal"]}</p>
+            <p><strong>Grupo:</strong> {sugerencia["Grupo"]}</p>
+            <p><strong>Prob. éxito:</strong> {sugerencia["Probabilidad_exito"]}%</p>
           </div>
         )}
 

@@ -7,6 +7,7 @@ import joblib
 import pandas as pd
 from datetime import datetime, timedelta
 import os
+import random
 
 # Inicializar Flask
 app = Flask(__name__)
@@ -132,6 +133,41 @@ def save():
     df.to_csv(HISTORIAL_FILE, index=False)
 
     return jsonify({"mensaje": "Registro guardado correctamente"})
+
+@app.route("/suggest", methods=["POST"])
+def suggest():
+    data = request.json
+    grupo_usuario = data.get("Grupo")
+
+    # Leer dataset original
+    df = pd.read_csv("Tabla_Politicas_Publicas.csv", encoding="latin-1", sep=";")
+
+    # Filtrar políticas exitosas del mismo grupo
+    exitosas = df[
+        (df["Grupo"] == grupo_usuario) &
+        (df["Evaluación"].str.contains("Éxito", na=False))
+    ]
+
+    if exitosas.empty:
+        return jsonify({"mensaje": "No hay sugerencias para este grupo"}), 200
+
+    # Elegir un objetivo exitoso de ese grupo
+    objetivo = random.choice(exitosas["Objetivo principal"].dropna().tolist())
+
+    candidato = {
+        "Objetivo principal": objetivo,
+        "Grupo": grupo_usuario
+    }
+
+    prob = modelo.predict_proba(pd.DataFrame([candidato]))[0][1]
+
+    sugerencia = {
+        **candidato,
+        "Probabilidad_exito": round(prob * 100, 2)
+    }
+
+    return jsonify(sugerencia)
+
 
 @app.route("/history", methods=["GET"])
 #@jwt_required()
