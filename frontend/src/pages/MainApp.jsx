@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { fetchWithAuth } from "../utils/api";
 import '../App.css';
 
 function MainApp() {
@@ -7,6 +8,8 @@ function MainApp() {
   const [resultado, setResultado] = useState(null);
   const [historial, setHistorial] = useState([]);
   const [sugerencia, setSugerencia] = useState(null);
+
+  const token = localStorage.getItem("token");
 
   const gruposDisponibles = [
     "Seguridad / TIC",
@@ -26,17 +29,19 @@ function MainApp() {
   }, []);
 
   const obtenerHistorial = async () => {
-    const res = await fetch("http://127.0.0.1:5000/history");
-    const data = await res.json();
-    setHistorial(data);
+    const res = await fetchWithAuth("http://127.0.0.1:5000/history");
+    if (res && res.ok) {
+      const data = await res.json();
+      setHistorial(data);
+    }
   };
 
   const handlePredict = async (e) => {
-  e.preventDefault();
-  setResultado(null);
-  setSugerencia(null);
+    e.preventDefault();
+    setResultado(null);
+    setSugerencia(null);
 
-  const res = await fetch("http://127.0.0.1:5000/predict", {
+    const res = await fetch("http://127.0.0.1:5000/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -62,9 +67,12 @@ function MainApp() {
   const guardarResultado = async (resultadoReal) => {
     if (!resultado) return;
 
-    await fetch("http://127.0.0.1:5000/save", {
+    await fetchWithAuth("http://127.0.0.1:5000/save", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
       body: JSON.stringify({
         "Objetivo principal": objetivo,
         "Grupo": grupo,
@@ -150,12 +158,12 @@ function MainApp() {
           <tbody>
             {historial.map((item, idx) => (
               <tr key={idx}>
-                <td>{item["Objetivo principal"]}</td>
-                <td>{item["Grupo"]}</td>
-                <td>{item["Prediccion"]}</td>
-                <td>{item["Probabilidad_exito"]}%</td>
-                <td>{item["Resultado_real"]}</td>
-                <td>{item["Fecha"]}</td>
+                <td>{item["objetivo"]}</td>
+                <td>{item["grupo"]}</td>
+                <td>{item["prediccion"]}</td>
+                <td>{item["probabilidad_exito"]}%</td>
+                <td>{item["resultado_real"]}</td>
+                <td>{item["fecha"]}</td>
               </tr>
             ))}
           </tbody>

@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from pymongo import MongoClient
+from bson import ObjectId
 import json
 import joblib
 import pandas as pd
@@ -17,34 +19,14 @@ app.config["JWT_SECRET_KEY"] = "clave_secreta_super_segura"  # cambia esto en pr
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 jwt = JWTManager(app)
 
+# Conexión a MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+db = client["politicas_db"]  # nombre de base de datos
+usuarios_col = db["usuarios"]
+predicciones_col = db["predicciones"]
+
 # Cargar el modelo entrenado
 modelo = joblib.load("modelo_randomforest_politicas.pkl")
-
-# Archivo donde guardaremos el historial
-HISTORIAL_FILE = "historial_politicas.csv"
-
-USERS_FILE = "usuarios.json"
-
-# Crear historial si no existe
-if not os.path.exists(HISTORIAL_FILE):
-    pd.DataFrame(columns=[
-        "Objetivo principal",
-        "Grupo",
-        "Prediccion",
-        "Probabilidad_exito",
-        "Resultado_real",
-        "Fecha"
-    ]).to_csv(HISTORIAL_FILE, index=False)
-
-def load_users():
-    if os.path.exists(USERS_FILE):
-        with open(USERS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
-
-def save_users(users):
-    with open(USERS_FILE, "w", encoding="utf-8") as f:
-        json.dump(users, f, indent=2, ensure_ascii=False)
 
 # Registro de usuario
 @app.route("/register", methods=["POST"])
@@ -53,14 +35,16 @@ def register():
     username = data.get("username")
     password = data.get("password")
 
-    users = load_users()
-
-    if username in users:
+    if usuarios_col.find_one({"username": username}):
         return jsonify({"error": "Usuario ya existe"}), 400
 
     hashed_pw = bcrypt.generate_password_hash(password).decode("utf-8")
-    users[username] = {"password": hashed_pw, "created_at": str(datetime.now())}
-    save_users(users)
+
+    usuarios_col.insert_one({
+        "username": username,
+        "password": hashed_pw,
+        "created_at": datetime.now()
+    })
 
     return jsonify({"message": "Usuario registrado con éxito"}), 201
 
@@ -71,12 +55,11 @@ def login():
     username = data.get("username")
     password = data.get("password")
 
-    users = load_users()
-
-    if username not in users or not bcrypt.check_password_hash(users[username]["password"], password):
+    user = usuarios_col.find_one({"username": username})
+    if not user or not bcrypt.check_password_hash(user["password"], password):
         return jsonify({"error": "Credenciales inválidas"}), 401
 
-    token = create_access_token(identity=username)
+    token = create_access_token(identity=str(user["_id"]))
     return jsonify({"token": token, "username": username})
 
 # --- Endpoint de predicción ---
@@ -107,32 +90,23 @@ def predict():
 
 # --- Endpoint para guardar resultado real ---
 @app.route("/save", methods=["POST"])
-#@jwt_required()
+@jwt_required()
 def save():
-    data = request.get_json()
+    current_user_id = get_jwt_identity()
+    data = request.json
 
-    # Validar datos
-    required = ["Objetivo principal", "Grupo", "Prediccion", "Probabilidad_exito", "Resultado_real"]
-    if not all(k in data for k in required):
-        return jsonify({"error": "Faltan campos para guardar"}), 400
+    prediccion = {
+        "user_id": current_user_id,
+        "objetivo": data["Objetivo principal"],
+        "grupo": data["Grupo"],
+        "prediccion": data["Prediccion"],
+        "probabilidad_exito": data["Probabilidad_exito"],
+        "resultado_real": data.get("Resultado_real"),
+        "fecha": datetime.now()
+    }
 
-    # Cargar historial
-    df = pd.read_csv(HISTORIAL_FILE)
-
-    # Agregar nueva fila
-    df.loc[len(df)] = [
-        data["Objetivo principal"],
-        data["Grupo"],
-        data["Prediccion"],
-        data["Probabilidad_exito"],
-        data["Resultado_real"],
-        datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    ]
-
-    # Guardar
-    df.to_csv(HISTORIAL_FILE, index=False)
-
-    return jsonify({"mensaje": "Registro guardado correctamente"})
+    predicciones_col.insert_one(prediccion)
+    return jsonify({"message": "Predicción guardada con éxito"}), 201
 
 @app.route("/suggest", methods=["POST"])
 def suggest():
@@ -168,15 +142,31 @@ def suggest():
 
     return jsonify(sugerencia)
 
+def serialize_mongo(doc):
+    doc["_id"] = str(doc["_id"])
+    return doc
 
 @app.route("/history", methods=["GET"])
-#@jwt_required()
+@jwt_required()
 def history():
-    if not os.path.exists(HISTORIAL_FILE):
-        return jsonify([])
+    current_user_id = get_jwt_identity()
 
-    df = pd.read_csv(HISTORIAL_FILE)
-    return jsonify(df.to_dict(orient="records"))
+    # Buscar predicciones del usuario
+    registros = [serialize_mongo(r) for r in predicciones_col.find({"user_id": current_user_id})]
+
+    for r in registros:
+        r["_id"] = str(r["_id"])
+        r["timestamp"] = r.get("timestamp").strftime("%Y-%m-%d %H:%M:%S") if r.get("timestamp") else None
+
+    return jsonify(registros)
+
+@app.route("/ping-db")
+def ping_db():
+    try:
+        db.command("ping")
+        return jsonify({"message": "✅ Conexión exitosa a MongoDB"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # --- Ejecutar Flask ---
 if __name__ == "__main__":

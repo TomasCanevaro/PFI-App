@@ -1,5 +1,7 @@
 ## Correr backend
 
+Instalar MongoDB para BD
+
 Abrir consola -> cd backend -> python app.py
 
 ## Correr frontend

@@ -23,7 +23,7 @@ function Login({ onLogin }) {
       localStorage.setItem("token", data.token);
       localStorage.setItem("username", data.username);
       onLogin(data.username);
-      navigate("/"); // 👈 redirige a la pantalla principal
+      navigate("/"); //redirige a la pantalla principal
     } else {
       setError(data.error || "Error al iniciar sesión");
     }
