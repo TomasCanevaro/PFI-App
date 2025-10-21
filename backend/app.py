@@ -125,8 +125,19 @@ def suggest():
     if exitosas.empty:
         return jsonify({"mensaje": "No hay sugerencias para este grupo"}), 200
 
-    # Elegir un objetivo exitoso de ese grupo
-    objetivo = random.choice(exitosas["Objetivo principal"].dropna().tolist())
+    # Elegir una política exitosa al azar
+    fila = exitosas.sample(1).iloc[0]
+
+    objetivo = fila["Objetivo principal"]
+    evaluacion = fila["Evaluación"]
+
+    # Extraer explicación posterior a "Éxito:" o "Fracaso:"
+    motivo = None
+    if isinstance(evaluacion, str):
+        if "Éxito:" in evaluacion:
+            motivo = evaluacion.split("Éxito:")[1].strip()
+        elif "Fracaso:" in evaluacion:
+            motivo = evaluacion.split("Fracaso:")[1].strip()
 
     candidato = {
         "Objetivo principal": objetivo,
@@ -137,7 +148,8 @@ def suggest():
 
     sugerencia = {
         **candidato,
-        "Probabilidad_exito": round(prob * 100, 2)
+        "Probabilidad_exito": round(prob * 100, 2),
+        "Evaluacion": motivo
     }
 
     return jsonify(sugerencia)

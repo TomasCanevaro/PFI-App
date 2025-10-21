@@ -162,6 +162,10 @@ function MainApp() {
             <p><strong>Objetivo:</strong> {sugerencia["Objetivo principal"]}</p>
             <p><strong>Grupo:</strong> {sugerencia["Grupo"]}</p>
             <p><strong>Prob. éxito:</strong> {sugerencia["Probabilidad_exito"]}%</p>
+
+            {sugerencia["Evaluacion"] && (
+              <p><strong>¿Por qué fue exitosa?</strong> {sugerencia["Evaluacion"]}</p>
+            )}
           </div>
         )}
 
