@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchWithAuth } from "../utils/api";
+import Historial from '../components/Historial';
 import '../App.css';
 
 function MainApp() {
@@ -33,6 +34,26 @@ function MainApp() {
     if (res && res.ok) {
       const data = await res.json();
       setHistorial(data);
+    }
+  };
+
+  const eliminarRegistro = async (id) => {
+    const confirmacion = window.confirm("¿Seguro que querés eliminar este registro?");
+    if (!confirmacion) return;
+
+    const res = await fetch(`http://127.0.0.1:5000/history/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem("token")}`
+      }
+    });
+
+    if (res.ok) {
+      alert("Registro eliminado");
+      obtenerHistorial(); // vuelve a cargar el historial
+    } else {
+      alert("No se pudo eliminar");
     }
   };
 
@@ -84,6 +105,7 @@ function MainApp() {
 
     obtenerHistorial();
     setResultado(null);
+    setSugerencia(null);
     setObjetivo("");
     setGrupo("");
   };
@@ -143,31 +165,7 @@ function MainApp() {
           </div>
         )}
 
-        <h2 className="historial-title">Historial</h2>
-        <table className="historial-table">
-          <thead>
-            <tr>
-              <th>Objetivo</th>
-              <th>Grupo</th>
-              <th>Predicción</th>
-              <th>Prob. Éxito</th>
-              <th>Resultado Real</th>
-              <th>Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-            {historial.map((item, idx) => (
-              <tr key={idx}>
-                <td>{item["objetivo"]}</td>
-                <td>{item["grupo"]}</td>
-                <td>{item["prediccion"]}</td>
-                <td>{item["probabilidad_exito"]}%</td>
-                <td>{item["resultado_real"]}</td>
-                <td>{item["fecha"]}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Historial historial={historial} onDelete={eliminarRegistro} />
       </div>
     </div>
   );

@@ -160,11 +160,32 @@ def history():
 
     return jsonify(registros)
 
+@app.route("/history/<id>", methods=["DELETE"])
+@jwt_required()
+def delete_history(id):
+    current_user_id = get_jwt_identity()
+
+    try:
+        # Intentar eliminar el registro solo si pertenece al usuario logueado
+        result = predicciones_col.delete_one({
+            "_id": ObjectId(id),
+            "user_id": current_user_id
+        })
+
+        if result.deleted_count == 0:
+            return jsonify({"error": "No se encontró el registro o no pertenece al usuario"}), 404
+
+        return jsonify({"message": "Registro eliminado correctamente"}), 200
+
+    except Exception as e:
+        print("Error eliminando registro:", e)
+        return jsonify({"error": "Error al eliminar registro"}), 500
+
 @app.route("/ping-db")
 def ping_db():
     try:
         db.command("ping")
-        return jsonify({"message": "✅ Conexión exitosa a MongoDB"})
+        return jsonify({"message": "Conexión exitosa a MongoDB"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

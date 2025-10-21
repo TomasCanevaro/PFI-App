@@ -64,6 +64,49 @@ button:hover {
   text-align: left;
 }
 
+.historial-container {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Título + botón en línea */
+.historial-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Botón Mostrar/Ocultar */
+.toggle-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de eliminar */
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 8px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background-color: #b52a37;
+}
+
 .historial-title {
   margin-top: 30px;
 }
