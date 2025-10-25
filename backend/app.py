@@ -4,23 +4,21 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from pymongo import MongoClient
 from bson import ObjectId
-import json
 import joblib
 import pandas as pd
 from datetime import datetime, timedelta
 import os
-import random
 
 # Inicializar Flask
 app = Flask(__name__)
-CORS(app)  # Permite que React (localhost:5173) llame al backend
+CORS(app)  # Permite que React llame al backend
 bcrypt = Bcrypt(app)
-app.config["JWT_SECRET_KEY"] = "clave_secreta_super_segura"  # cambia esto en producción
+app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 jwt = JWTManager(app)
 
 # Conexión a MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient(os.getenv("MONGO_URI"))
 db = client["politicas_db"]  # nombre de base de datos
 usuarios_col = db["usuarios"]
 predicciones_col = db["predicciones"]
@@ -62,7 +60,7 @@ def login():
     token = create_access_token(identity=str(user["_id"]))
     return jsonify({"token": token, "username": username})
 
-# --- Endpoint de predicción ---
+# Endpoint de predicción
 @app.route("/predict", methods=["POST"])
 #@jwt_required()
 def predict():
@@ -82,13 +80,12 @@ def predict():
     pred = modelo.predict(nueva_muestra)[0]
     proba = modelo.predict_proba(nueva_muestra)[0][1]  # probabilidad de éxito
 
-    # Respuesta
     return jsonify({
         "prediccion": "Éxito" if pred == 1 else "Fracaso",
         "probabilidad_exito": round(proba * 100, 2)
     })
 
-# --- Endpoint para guardar resultado real ---
+# Endpoint para guardar resultado real
 @app.route("/save", methods=["POST"])
 @jwt_required()
 def save():
@@ -108,6 +105,7 @@ def save():
     predicciones_col.insert_one(prediccion)
     return jsonify({"message": "Predicción guardada con éxito"}), 201
 
+# Endpoint de sugerencia
 @app.route("/suggest", methods=["POST"])
 def suggest():
     data = request.json
@@ -201,6 +199,6 @@ def ping_db():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --- Ejecutar Flask ---
+# Ejecutar Flask
 if __name__ == "__main__":
     app.run(debug=True)
