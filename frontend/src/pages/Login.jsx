@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -23,7 +24,7 @@ function Login({ onLogin }) {
       localStorage.setItem("token", data.token);
       localStorage.setItem("username", data.username);
       onLogin(data.username);
-      navigate("/"); //redirige a la pantalla principal
+      navigate("/");
     } else {
       setError(data.error || "Error al iniciar sesión");
     }
