@@ -37,3 +37,13 @@ cd backend
 ```
 python -m unittest discover tests
 ```
+
+### Correr tests frontend
+
+Para correr los tests unitarios del frontend:
+
+cd frontend
+
+```
+npm run test
+```
