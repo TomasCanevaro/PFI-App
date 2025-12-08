@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 
 # Cargar el modelo entrenado
-modelo = joblib.load("modelo_randomforest_politicas.pkl")
+modelo = joblib.load("../modelo_randomforest_politicas.pkl")
 
 # Crear input manual
 # Simulamos una política: objetivo + grupo temático
