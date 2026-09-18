@@ -1,5 +1,7 @@
 
-export async function fetchWithAuth(url, options = {}) {
+export const API_URL = import.meta.env.VITE_API_URL ?? "http://127.0.0.1:5000";
+
+export async function fetchWithAuth(path, options = {}) {
   const token = localStorage.getItem("token");
 
   const headers = {
@@ -9,7 +11,7 @@ export async function fetchWithAuth(url, options = {}) {
   };
 
   try {
-    const res = await fetch(url, { ...options, headers });
+    const res = await fetch(`${API_URL}${path}`, { ...options, headers });
 
     // Si el token expiró o no es válido → redirijo al login
     if (res.status === 401) {

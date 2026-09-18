@@ -1,43 +1,10 @@
-
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import Resultado from '../Resultado';
-import { describe, it, expect, vi } from 'vitest';
 
+const resultado = { politica_recomendada: 'Centro de salud', categoria_politica: 'Salud', puntaje_recomendacion: 80, costo_estimado: 1000, tiempo_implementacion_meses: 4, dificultad_implementacion: 30, alternativas: [{ politica: 'Centro de salud', puntaje_recomendacion: 80 }, { politica: 'Taller', puntaje_recomendacion: 20 }] };
 describe('Resultado', () => {
-  const guardarResultado = vi.fn();
-
-  const resultado = {
-    prediccion: 'Éxito',
-    probabilidad_exito: 80,
-  };
-
-  it('renders correctly with results', () => {
-    render(<Resultado resultado={resultado} guardarResultado={guardarResultado} />);
-
-    expect(screen.getByText('Resultado')).toBeInTheDocument();
-    expect(screen.getByText('Predicción:')).toBeInTheDocument();
-    expect(screen.getByText('Éxito')).toBeInTheDocument();
-    expect(screen.getByText('Probabilidad de éxito:')).toBeInTheDocument();
-    expect(screen.getByText('80%')).toBeInTheDocument();
-    expect(screen.getByText('Marcar como Éxito')).toBeInTheDocument();
-    expect(screen.getByText('Marcar como Fracaso')).toBeInTheDocument();
-  });
-
-  it('does not render when there are no results', () => {
-    render(<Resultado resultado={null} guardarResultado={guardarResultado} />);
-    expect(screen.queryByText('Resultado')).not.toBeInTheDocument();
-  });
-
-  it('calls guardarResultado with "Éxito" when the success button is clicked', () => {
-    render(<Resultado resultado={resultado} guardarResultado={guardarResultado} />);
-    fireEvent.click(screen.getByText('Marcar como Éxito'));
-    expect(guardarResultado).toHaveBeenCalledWith('Éxito');
-  });
-
-  it('calls guardarResultado with "Fracaso" when the failure button is clicked', () => {
-    render(<Resultado resultado={resultado} guardarResultado={guardarResultado} />);
-    fireEvent.click(screen.getByText('Marcar como Fracaso'));
-    expect(guardarResultado).toHaveBeenCalledWith('Fracaso');
-  });
+  it('renders recommendation and alternatives', () => { render(<Resultado resultado={resultado} guardarResultado={vi.fn()} />); expect(screen.getByText('Centro de salud')).toBeInTheDocument(); expect(screen.getByText('Taller (20%)')).toBeInTheDocument(); });
+  it('saves implementation status', () => { const save = vi.fn(); render(<Resultado resultado={resultado} guardarResultado={save} />); fireEvent.click(screen.getByText('Marcar como implementada')); expect(save).toHaveBeenCalledWith('Implementada'); });
 });

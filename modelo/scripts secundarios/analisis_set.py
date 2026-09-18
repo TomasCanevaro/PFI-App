@@ -1,25 +1,14 @@
+"""Resumen del dataset usado por el recomendador."""
+from pathlib import Path
+
 import pandas as pd
 
-# Cargar el dataset con encoding correcto
-df = pd.read_csv("Tabla_Politicas_Publicas.csv", encoding="latin-1", sep=";")
+dataset = Path(__file__).resolve().parents[1] / "data" / "dataset_entrenamiento.csv"
+df = pd.read_csv(dataset)
 
-# Mostrar las primeras filas
-print("Primeras filas del dataset:")
-print(df.head())
-
-# Mostrar nombres de columnas
-print("\nColumnas del dataset:")
-print(df.columns.tolist())
-
-# Información general sobre los datos
-print("\nResumen de columnas:")
-print(df.info())
-
-# Estadísticas básicas
-print("\nEstadísticas descriptivas:")
-print(df.describe(include='all'))
-
-# Revisar valores únicos por columna (útil para ver clases, categorías, etc.)
-print("\nValores únicos por columna:")
-for col in df.columns:
-    print(f"{col}: {df[col].unique()[:10]}")  # muestra solo los primeros 10 valores únicos
+print("Filas y columnas:", df.shape)
+print("Columnas:", df.columns.tolist())
+print("Distribución de politica_ganadora:")
+print(df["politica_ganadora"].value_counts())
+print("Problemas por municipio:")
+print(df[["municipio_id", "problema_id", "problema"]].drop_duplicates().to_string(index=False))

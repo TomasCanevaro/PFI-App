@@ -1,81 +1,21 @@
-
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import PoliticaForm from '../PoliticaForm';
-import { describe, it, expect, vi } from 'vitest';
+
+const problemas = [{ problema_id: 1, municipio_id: 1, problema: 'Falta de salud', categoria_problema: 'Salud', nivel_severidad: 8, poblacion_afectada: 1000 }];
 
 describe('PoliticaForm', () => {
-  const handlePredict = vi.fn();
-  const setObjetivo = vi.fn();
-  const setGrupo = vi.fn();
-  const gruposDisponibles = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
-
-  it('renders correctly', () => {
-    render(
-      <PoliticaForm
-        objetivo=""
-        setObjetivo={setObjetivo}
-        grupo=""
-        setGrupo={setGrupo}
-        handlePredict={handlePredict}
-        gruposDisponibles={gruposDisponibles}
-      />
-    );
-
-    expect(screen.getByLabelText('Objetivo principal:')).toBeInTheDocument();
-    expect(screen.getByLabelText('Grupo:')).toBeInTheDocument();
-    expect(screen.getByText('Evaluar')).toBeInTheDocument();
+  it('shows municipal data for the selected problem', () => {
+    render(<PoliticaForm problemas={problemas} problemaId="1" setProblemaId={vi.fn()} handlePredict={vi.fn()} />);
+    expect(screen.getByLabelText('Problema municipal:')).toBeInTheDocument();
+    expect(screen.getByText('Municipio:')).toBeInTheDocument();
+    expect(screen.getByText('Falta de salud')).toBeInTheDocument();
   });
-
-  it('updates input value on change', () => {
-    render(
-      <PoliticaForm
-        objetivo=""
-        setObjetivo={setObjetivo}
-        grupo=""
-        setGrupo={setGrupo}
-        handlePredict={handlePredict}
-        gruposDisponibles={gruposDisponibles}
-      />
-    );
-
-    const input = screen.getByLabelText('Objetivo principal:');
-    fireEvent.change(input, { target: { value: 'Test' } });
-    expect(setObjetivo).toHaveBeenCalledWith('Test');
-  });
-
-  it('updates select value on change', () => {
-    render(
-      <PoliticaForm
-        objetivo=""
-        setObjetivo={setObjetivo}
-        grupo=""
-        setGrupo={setGrupo}
-        handlePredict={handlePredict}
-        gruposDisponibles={gruposDisponibles}
-      />
-    );
-
-    const select = screen.getByLabelText('Grupo:');
-    fireEvent.change(select, { target: { value: 'Grupo 1' } });
-    expect(setGrupo).toHaveBeenCalledWith('Grupo 1');
-  });
-
-  it('calls handlePredict on form submission', () => {
-    const handlePredict = vi.fn((e) => e.preventDefault());
-    render(
-      <PoliticaForm
-        objetivo="Test"
-        setObjetivo={setObjetivo}
-        grupo="Grupo 1"
-        setGrupo={setGrupo}
-        handlePredict={handlePredict}
-        gruposDisponibles={gruposDisponibles}
-      />
-    );
-
-    const form = screen.getByRole('button', { name: 'Evaluar' });
-    fireEvent.submit(form);
-    expect(handlePredict).toHaveBeenCalled();
+  it('updates the selected problem', () => {
+    const setProblemaId = vi.fn();
+    render(<PoliticaForm problemas={problemas} problemaId="" setProblemaId={setProblemaId} handlePredict={vi.fn()} />);
+    fireEvent.change(screen.getByLabelText('Problema municipal:'), { target: { value: '1' } });
+    expect(setProblemaId).toHaveBeenCalledWith('1');
   });
 });

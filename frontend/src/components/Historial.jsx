@@ -1,62 +1,21 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { fetchWithAuth } from "../utils/api";
+import React, { useState } from 'react';
 
 function Historial({ historial, onDelete }) {
-    const [mostrarHistorial, setMostrarHistorial] = useState(false);
-
-    return (
-        <div className="historial-container">
-            <div className="historial-header">
-                <h2 className="historial-title">Historial</h2>
-                <button 
-                    className="toggle-btn"
-                    onClick={() => setMostrarHistorial(!mostrarHistorial)}>
-                {mostrarHistorial ? "Ocultar" : "Mostrar"}
-                </button>
-            </div>
-
-        {mostrarHistorial && (
-            <div>
-            {historial.length === 0 ? (
-                <p>No hay registros.</p>
-            ) : (
-                <table className="historial-table">
-                <thead>
-                    <tr>
-                    <th>Objetivo</th>
-                    <th>Grupo</th>
-                    <th>Predicción</th>
-                    <th>Prob. Éxito</th>
-                    <th>Resultado Real</th>
-                    <th>Fecha</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {historial.map((item, idx) => (
-                    <tr key={idx}>
-                        <td>{item["objetivo"]}</td>
-                        <td>{item["grupo"]}</td>
-                        <td>{item["prediccion"]}</td>
-                        <td>{item["probabilidad_exito"]}%</td>
-                        <td>{item["resultado_real"]}</td>
-                        <td>{item["fecha"]}</td>
-                        <td><button 
-                            className="delete-btn"
-                            onClick={() => onDelete(item._id)}
-                            >
-                            Eliminar
-                        </button></td>
-                    </tr>
-                    ))}
-                </tbody>
-                </table>
-            )}
-                
-            </div>
-        )}
-        </div>
-    );
+  const [mostrarHistorial, setMostrarHistorial] = useState(false);
+  return (
+    <section className="historial-container">
+      <div className="historial-header"><h2 className="historial-title">Historial</h2>
+        <button className="toggle-btn" onClick={() => setMostrarHistorial(!mostrarHistorial)}>{mostrarHistorial ? 'Ocultar' : 'Mostrar'}</button>
+      </div>
+      {mostrarHistorial && (historial.length === 0 ? <p>No hay registros.</p> : <table className="historial-table">
+        <thead><tr><th>Problema</th><th>Municipio</th><th>Política recomendada</th><th>Puntaje</th><th>Resultado real</th><th>Fecha</th><th>Acción</th></tr></thead>
+        <tbody>{historial.map((item) => <tr key={item._id}>
+          <td>{item.problema}</td><td>{item.municipio_id}</td><td>{item.politica_recomendada}</td><td>{item.puntaje_recomendacion}%</td>
+          <td>{item.resultado_real}</td><td>{item.fecha}</td><td><button className="delete-btn" onClick={() => onDelete(item._id)}>Eliminar</button></td>
+        </tr>)}</tbody>
+      </table>)}
+    </section>
+  );
 }
 
 export default Historial;

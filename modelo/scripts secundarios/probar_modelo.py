@@ -1,20 +1,20 @@
+"""Ejemplo de ranking de políticas candidatas para un problema del catálogo."""
+from pathlib import Path
+
 import joblib
 import pandas as pd
 
-# Cargar el modelo entrenado
-modelo = joblib.load("../modelo_randomforest_politicas.pkl")
+ROOT = Path(__file__).resolve().parents[1]
+FEATURES = [
+    "categoria_problema", "categoria_politica", "nivel_severidad", "poblacion_afectada",
+    "costo_estimado", "tiempo_implementacion_meses", "dificultad_implementacion", "nivel_evidencia",
+]
 
-# Crear input manual
-# Simulamos una política: objetivo + grupo temático
-nueva_muestra = pd.DataFrame([{
-    'Objetivo principal': "Crear centros de salud mental en escuelas",  # texto libre
-    'Grupo': "Salud / Educación"  # debe parecerse a los que había en el CSV
-}])
+modelo = joblib.load(ROOT / "modelo_recomendador_politicas.pkl")
+df = pd.read_csv(ROOT / "data" / "dataset_entrenamiento.csv")
 
-# Hacer la predicción
-prediccion = modelo.predict(nueva_muestra)
-proba = modelo.predict_proba(nueva_muestra)
+# Cambiar estos IDs por un problema y municipio existentes en el dataset.
+candidatas = df[(df["problema_id"] == 2) & (df["municipio_id"] == 1)].copy()
+candidatas["puntaje_recomendacion"] = modelo.predict_proba(candidatas[FEATURES])[:, 1]
 
-# Mostrar resultados
-print("Resultado predicho:", "Éxito" if prediccion[0] == 1 else "Fracaso")
-print(f"Probabilidades: Fracaso={proba[0][0]*100:.2f}% | Éxito={proba[0][1]*100:.2f}%")
+print(candidatas[["politica", "puntaje_recomendacion"]].sort_values("puntaje_recomendacion", ascending=False).head(3).to_string(index=False))

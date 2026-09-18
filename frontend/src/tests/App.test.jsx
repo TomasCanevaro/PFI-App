@@ -41,19 +41,16 @@ describe('App', () => {
 
     it('renders MainApp when authenticated', async () => {
         window.localStorage.setItem('username', 'testuser');
-        // Mock fetch for MainApp's history fetch
-        global.fetch = vi.fn(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => Promise.resolve([]),
-            })
-        );
+        // MainApp solicita el historial y luego el catálogo municipal.
+        global.fetch = vi.fn()
+            .mockResolvedValueOnce({ ok: true, json: () => Promise.resolve([]) })
+            .mockResolvedValueOnce({ ok: true, json: () => Promise.resolve({ problemas: [] }) });
         
         render(
             <App RouterComponent={MemoryRouter} initialEntries={['/']} />
         );
         await waitFor(() => {
-            expect(screen.getByText('Evaluar Política Pública')).toBeInTheDocument();
+            expect(screen.getByText('Recomendar Política Pública')).toBeInTheDocument();
         });
     });
 
@@ -68,7 +65,7 @@ describe('App', () => {
         // Clear localStorage before test
         window.localStorage.clear();
         
-        // Mock fetch - first for login, then for MainApp history fetch after navigation
+        // Login, historial y catálogo tras navegar a la pantalla principal.
         global.fetch = vi.fn()
             .mockResolvedValueOnce({
                 ok: true,
@@ -77,6 +74,10 @@ describe('App', () => {
             .mockResolvedValueOnce({
                 ok: true,
                 json: () => Promise.resolve([]),
+            })
+            .mockResolvedValueOnce({
+                ok: true,
+                json: () => Promise.resolve({ problemas: [] }),
             });
         
         render(
@@ -89,7 +90,7 @@ describe('App', () => {
         fireEvent.click(screen.getByText('Entrar'));
 
         await waitFor(() => {
-            expect(screen.getByText('Evaluar Política Pública')).toBeInTheDocument();
+            expect(screen.getByText('Recomendar Política Pública')).toBeInTheDocument();
         }, { timeout: 3000 });
 
         // Logout - should navigate back to login via Navigate component
