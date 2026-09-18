@@ -1,0 +1,371 @@
+"problema_id","municipio_id","problema","categoria_problema","nivel_severidad","poblacion_afectada","politica_id","politica","categoria_politica","costo_estimado","tiempo_implementacion_meses","dificultad_implementacion","nivel_evidencia","activa","aplicable","costo_estimado_local","politica_ganadora"
+1,1,"Desocupación laboral","Empleo",7.70,9300,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+1,1,"Desocupación laboral","Empleo",7.70,9300,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,1
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+2,1,"Falta de cobertura de salud","Salud",13.50,37976,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,1
+3,1,"Inasistencia educativa","Educación",6.00,1032,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+3,1,"Inasistencia educativa","Educación",6.00,1032,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+4,1,"Brecha de acceso a Internet","Conectividad",8.50,23859,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,1
+5,1,"Bajo nivel educativo","Educación",5.50,125480,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+5,1,"Bajo nivel educativo","Educación",5.50,125480,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,1
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,1
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,1
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,1
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+6,1,"Falta de acceso a red pública de desagüe","Infraestructura",2.00,5611,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,1
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,1
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,1
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,1
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+7,1,"Falta de acceso a agua de red pública","Infraestructura",1.40,3928,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+8,1,"Brecha de acceso a dispositivos tecnológicos","Conectividad",4.00,49976,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,1
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,1
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,1
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,1
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+9,1,"Déficit de acceso a gas de red","Infraestructura",4.50,52724,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,247,"Ordenamiento de tránsito - José Ingenieros y Washington","Infraestructura",200000.00,3,25.00,90.00,True,True,200000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,248,"Seguridad vial en Club Drysdale","Infraestructura",1200000.00,4,30.00,90.00,True,True,1200000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,249,"Jardín de Infantes Nº 908 - Equipamiento","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,250,"Florida Club - Reparación de techos","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,251,"Sociedad de Fomento Aristóbulo del Valle - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,252,"Club Social y Deportivo Estrella Federal - Refacciones","Deportes",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,253,"Escuela Secundaria Nº 6 - Equipamiento informático y tecnológico","Educación",26700000.00,6,45.00,90.00,True,True,26700000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,254,"Círculo de Ajedrez Villa Martelli - Refacciones y equipamiento","Deportes",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,255,"APOVILO - Equipamiento y refacciones","Salud",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,256,"Jardín de Infantes Nº 908 - Equipamiento para actividades escolares","Educación",1620000.00,4,25.00,90.00,True,True,1620000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,257,"Unión Vecinal 25 de Mayo - Reformas edilicias","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,258,"Escuela Primaria Nº 18 - Equipamiento y materiales","Educación",7650000.00,6,40.00,90.00,True,True,7650000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,259,"Sociedad de Fomento Drysdale - Cerramiento del nuevo SUM","Desarrollo social",30000000.00,8,55.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,260,"Escuela Secundaria Nº 3 - Cielorraso y equipamiento","Educación",14650000.00,8,50.00,90.00,True,True,14650000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,261,"Centro de Jubilados Carapachay - Luminarias y heladeras","Desarrollo social",2680000.00,5,30.00,90.00,True,True,2680000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,262,"Semáforo de giro en Independencia y Ascasubi","Infraestructura",5136000.00,6,45.00,90.00,True,True,5136000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,263,"Techo para parada de colectivo línea 252","Infraestructura",7800000.00,6,40.00,90.00,True,True,7800000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,264,"Escuela Secundaria Nº 8 - Instrumentos musicales y mobiliario","Educación",9400000.00,6,40.00,90.00,True,True,9400000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,265,"Biblioteca Popular Sudestada - Reparaciones y equipamiento","Cultura",12000000.00,8,45.00,90.00,True,True,12000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,266,"Sociedad de Fomento de La Lucila - Refacciones y equipamiento","Desarrollo social",30000000.00,8,50.00,90.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,267,"Club Unión Florida - Mejoras y equipamiento","Deportes",30000000.00,12,45.00,80.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,268,"Escuela Primaria N° 16 - Mejoras y equipamiento","Educación",10000000.00,10,40.00,82.00,True,True,10000000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,269,"Rotary Club La Lucila - Mejoras y equipamiento","Desarrollo social",3765000.00,8,35.00,78.00,True,True,3765000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,270,"Escuela Parroquial Stella Maris - Mejoras","Educación",30000000.00,12,50.00,82.00,True,True,30000000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,271,"Centro Comunitario Virgen de Luján - Mejoras y equipamiento","Desarrollo social",7000000.00,8,40.00,78.00,True,True,7000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,272,"Club de Pescadores Olivos - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,273,"Centro de Veteranos de Guerra de Malvinas Vicente López - Mejoras","Desarrollo social",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,274,"Hogar Querubines - Mejoras","Desarrollo social",30000000.00,12,50.00,82.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,275,"Escuela de Educación Técnica N° 3 - Mejoras y equipamiento","Educación",30000000.00,12,50.00,85.00,True,True,30000000.00,1
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,276,"Casa de los Jóvenes - Mejoras","Desarrollo social",4000000.00,8,35.00,80.00,True,True,4000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,277,"Centro de Jubilados y Pensionados Sarmiento - Mejoras","Desarrollo social",380000.00,6,30.00,78.00,True,True,380000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,278,"Grupo Scout Hipólito Bouchard - Equipamiento","Desarrollo social",6000000.00,6,30.00,78.00,True,True,6000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,279,"Centro de Guías de Turismo de Vicente López - Equipamiento","Desarrollo social",220000.00,6,25.00,75.00,True,True,220000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,280,"VILO Rugby - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,281,"Grupo Scout Nuestra Señora de la Pureza - Mejoras y equipamiento","Desarrollo social",30000000.00,12,45.00,78.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,282,"Club de Laprida - Mejoras","Deportes",30000000.00,12,50.00,80.00,True,True,30000000.00,0
+10,1,"Brecha de acceso a educación superior","Educación",5.00,125548,283,"Biblioteca Popular León A. Vienni - Equipamiento","Cultura",600000.00,6,25.00,82.00,True,True,600000.00,0

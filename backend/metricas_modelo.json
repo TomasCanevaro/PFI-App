@@ -1,0 +1,35 @@
+{
+  "dataset": {
+    "filas": 370,
+    "variables_predictoras": [
+      "categoria_problema",
+      "categoria_politica",
+      "nivel_severidad",
+      "poblacion_afectada",
+      "costo_estimado",
+      "tiempo_implementacion_meses",
+      "dificultad_implementacion",
+      "nivel_evidencia"
+    ],
+    "etiqueta": "politica_ganadora"
+  },
+  "validacion": "GroupKFold de 5 pliegues agrupado por problema_id",
+  "metricas": {
+    "regresion_logistica": {
+      "accuracy": 0.8216,
+      "precision": 0.3488,
+      "recall": 0.75,
+      "f1": 0.4762,
+      "auc": 0.8724
+    },
+    "random_forest": {
+      "accuracy": 0.927,
+      "precision": 0.8095,
+      "recall": 0.425,
+      "f1": 0.5574,
+      "auc": 0.9698
+    }
+  },
+  "modelo_seleccionado": "random_forest",
+  "criterio_seleccion": "mayor F1 de la clase politica_ganadora"
+}

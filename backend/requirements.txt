@@ -6,3 +6,4 @@ pymongo
 joblib
 pandas
 python-dotenv
+scikit-learn==1.6.1

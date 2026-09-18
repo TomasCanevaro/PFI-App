@@ -1,204 +1,157 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from flask_bcrypt import Bcrypt
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
-from pymongo import MongoClient
-from bson import ObjectId
-import joblib
-import pandas as pd
 from datetime import datetime, timedelta
+from pathlib import Path
 import os
 
-# Inicializar Flask
+import joblib
+import pandas as pd
+from bson import ObjectId
+from dotenv import load_dotenv
+from flask import Flask, jsonify, request
+from flask_bcrypt import Bcrypt
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager, create_access_token, get_jwt_identity, jwt_required
+from pymongo import MongoClient
+
+load_dotenv()
+BASE_DIR = Path(__file__).resolve().parent
+DATASET_PATH = BASE_DIR / "data" / "dataset_entrenamiento.csv"
+MODEL_PATH = BASE_DIR / "modelo_recomendador_politicas.pkl"
+FEATURES = [
+    "categoria_problema", "categoria_politica", "nivel_severidad", "poblacion_afectada",
+    "costo_estimado", "tiempo_implementacion_meses", "dificultad_implementacion", "nivel_evidencia",
+]
+
 app = Flask(__name__)
-CORS(app)  # Permite que React llame al backend
+CORS(app)
 bcrypt = Bcrypt(app)
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 jwt = JWTManager(app)
-
-# Conexión a MongoDB
 client = MongoClient(os.getenv("MONGO_URI"))
-db = client["politicas_db"]  # nombre de base de datos
+db = client["politicas_db"]
 usuarios_col = db["usuarios"]
 predicciones_col = db["predicciones"]
+modelo = joblib.load(MODEL_PATH)
 
-# Cargar el modelo entrenado
-modelo = joblib.load("modelo_randomforest_politicas.pkl")
 
-# Registro de usuario
+def cargar_catalogo() -> pd.DataFrame:
+    return pd.read_csv(DATASET_PATH)
+
+
 @app.route("/register", methods=["POST"])
 def register():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
-
+    data = request.get_json(silent=True) or {}
+    username, password = data.get("username"), data.get("password")
+    if not isinstance(username, str) or not username.strip() or not isinstance(password, str) or not password:
+        return jsonify({"error": "Usuario y contraseña son obligatorios"}), 400
     if usuarios_col.find_one({"username": username}):
         return jsonify({"error": "Usuario ya existe"}), 400
-
-    hashed_pw = bcrypt.generate_password_hash(password).decode("utf-8")
-
-    usuarios_col.insert_one({
-        "username": username,
-        "password": hashed_pw,
-        "created_at": datetime.now()
-    })
-
+    usuarios_col.insert_one({"username": username, "password": bcrypt.generate_password_hash(password).decode("utf-8"), "created_at": datetime.now()})
     return jsonify({"message": "Usuario registrado con éxito"}), 201
 
-# Login de usuario
+
 @app.route("/login", methods=["POST"])
 def login():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
-
-    user = usuarios_col.find_one({"username": username})
-    if not user or not bcrypt.check_password_hash(user["password"], password):
+    data = request.get_json(silent=True) or {}
+    user = usuarios_col.find_one({"username": data.get("username")})
+    if not user or not bcrypt.check_password_hash(user["password"], data.get("password", "")):
         return jsonify({"error": "Credenciales inválidas"}), 401
+    return jsonify({"token": create_access_token(identity=str(user["_id"])), "username": user["username"]})
 
-    token = create_access_token(identity=str(user["_id"]))
-    return jsonify({"token": token, "username": username})
 
-# Endpoint de predicción
+@app.route("/catalog", methods=["GET"])
+@jwt_required()
+def catalog():
+    df = cargar_catalogo()
+    columns = ["problema_id", "municipio_id", "problema", "categoria_problema", "nivel_severidad", "poblacion_afectada"]
+    problems = df[columns].drop_duplicates().sort_values("problema_id").to_dict(orient="records")
+    return jsonify({"problemas": problems})
+
+
+def recomendar(problema_id: int, municipio_id: int) -> dict | None:
+    df = cargar_catalogo()
+    candidates = df[(df["problema_id"] == problema_id) & (df["municipio_id"] == municipio_id)].copy()
+    if candidates.empty:
+        return None
+    candidates = candidates[(candidates["activa"].astype(str).str.lower() == "true") & (candidates["aplicable"].astype(str).str.lower() == "true")]
+    if candidates.empty:
+        return None
+    candidates["puntaje_recomendacion"] = modelo.predict_proba(candidates[FEATURES])[:, 1]
+    candidates = candidates.sort_values("puntaje_recomendacion", ascending=False)
+    best = candidates.iloc[0]
+    return {
+        "problema": best["problema"], "municipio_id": int(best["municipio_id"]),
+        "politica_recomendada": best["politica"], "categoria_politica": best["categoria_politica"],
+        "puntaje_recomendacion": round(float(best["puntaje_recomendacion"]) * 100, 2),
+        "costo_estimado": float(best["costo_estimado"]),
+        "tiempo_implementacion_meses": int(best["tiempo_implementacion_meses"]),
+        "dificultad_implementacion": float(best["dificultad_implementacion"]),
+        "alternativas": [{"politica": row.politica, "puntaje_recomendacion": round(float(row.puntaje_recomendacion) * 100, 2)} for row in candidates.head(3).itertuples()],
+    }
+
+
 @app.route("/predict", methods=["POST"])
-#@jwt_required()
+@jwt_required()
 def predict():
-    data = request.get_json()
+    data = request.get_json(silent=True) or {}
+    try:
+        problema_id, municipio_id = int(data.get("problema_id")), int(data.get("municipio_id"))
+    except (TypeError, ValueError):
+        return jsonify({"error": "problema_id y municipio_id son obligatorios"}), 400
+    recommendation = recomendar(problema_id, municipio_id)
+    if recommendation is None:
+        return jsonify({"error": "No hay políticas aplicables para ese problema y municipio"}), 404
+    return jsonify(recommendation)
 
-    # Validar datos recibidos
-    if "Objetivo principal" not in data or "Grupo" not in data:
-        return jsonify({"error": "Faltan campos requeridos"}), 400
 
-    # Convertir a DataFrame
-    nueva_muestra = pd.DataFrame([{
-        "Objetivo principal": data["Objetivo principal"],
-        "Grupo": data["Grupo"]
-    }])
-
-    # Predicción
-    pred = modelo.predict(nueva_muestra)[0]
-    proba = modelo.predict_proba(nueva_muestra)[0][1]  # probabilidad de éxito
-
-    return jsonify({
-        "prediccion": "Éxito" if pred == 1 else "Fracaso",
-        "probabilidad_exito": round(proba * 100, 2)
-    })
-
-# Endpoint para guardar resultado real
 @app.route("/save", methods=["POST"])
 @jwt_required()
 def save():
-    current_user_id = get_jwt_identity()
-    data = request.json
+    data = request.get_json(silent=True) or {}
+    required = ("problema", "municipio_id", "politica_recomendada", "puntaje_recomendacion")
+    if not all(field in data for field in required):
+        return jsonify({"error": "Faltan campos requeridos"}), 400
+    predicciones_col.insert_one({
+        "user_id": get_jwt_identity(), "problema": data["problema"], "municipio_id": data["municipio_id"],
+        "politica_recomendada": data["politica_recomendada"], "puntaje_recomendacion": data["puntaje_recomendacion"],
+        "resultado_real": data.get("resultado_real"), "fecha": datetime.now(),
+    })
+    return jsonify({"message": "Recomendación guardada con éxito"}), 201
 
-    prediccion = {
-        "user_id": current_user_id,
-        "objetivo": data["Objetivo principal"],
-        "grupo": data["Grupo"],
-        "prediccion": data["Prediccion"],
-        "probabilidad_exito": data["Probabilidad_exito"],
-        "resultado_real": data.get("Resultado_real"),
-        "fecha": datetime.now()
-    }
-
-    predicciones_col.insert_one(prediccion)
-    return jsonify({"message": "Predicción guardada con éxito"}), 201
-
-# Endpoint de sugerencia
-@app.route("/suggest", methods=["POST"])
-def suggest():
-    data = request.json
-    grupo_usuario = data.get("Grupo")
-
-    # Leer dataset original
-    df = pd.read_csv("Tabla_Politicas_Publicas.csv", encoding="latin-1", sep=";")
-
-    # Filtrar políticas exitosas del mismo grupo
-    exitosas = df[
-        (df["Grupo"] == grupo_usuario) &
-        (df["Evaluación"].str.contains("Éxito", na=False))
-    ]
-
-    if exitosas.empty:
-        return jsonify({"mensaje": "No hay sugerencias para este grupo"}), 200
-
-    # Elegir una política exitosa al azar
-    fila = exitosas.sample(1).iloc[0]
-
-    objetivo = fila["Objetivo principal"]
-    evaluacion = fila["Evaluación"]
-
-    # Extraer explicación posterior a "Éxito:" o "Fracaso:"
-    motivo = None
-    if isinstance(evaluacion, str):
-        if "Éxito:" in evaluacion:
-            motivo = evaluacion.split("Éxito:")[1].strip()
-        elif "Fracaso:" in evaluacion:
-            motivo = evaluacion.split("Fracaso:")[1].strip()
-
-    candidato = {
-        "Objetivo principal": objetivo,
-        "Grupo": grupo_usuario
-    }
-
-    prob = modelo.predict_proba(pd.DataFrame([candidato]))[0][1]
-
-    sugerencia = {
-        **candidato,
-        "Probabilidad_exito": round(prob * 100, 2),
-        "Evaluacion": motivo
-    }
-
-    return jsonify(sugerencia)
 
 def serialize_mongo(doc):
     doc["_id"] = str(doc["_id"])
+    if isinstance(doc.get("fecha"), datetime):
+        doc["fecha"] = doc["fecha"].strftime("%Y-%m-%d %H:%M:%S")
     return doc
+
 
 @app.route("/history", methods=["GET"])
 @jwt_required()
 def history():
-    current_user_id = get_jwt_identity()
+    return jsonify([serialize_mongo(row) for row in predicciones_col.find({"user_id": get_jwt_identity()})])
 
-    # Buscar predicciones del usuario
-    registros = [serialize_mongo(r) for r in predicciones_col.find({"user_id": current_user_id})]
-
-    for r in registros:
-        r["_id"] = str(r["_id"])
-        r["timestamp"] = r.get("timestamp").strftime("%Y-%m-%d %H:%M:%S") if r.get("timestamp") else None
-
-    return jsonify(registros)
 
 @app.route("/history/<id>", methods=["DELETE"])
 @jwt_required()
 def delete_history(id):
-    current_user_id = get_jwt_identity()
-
     try:
-        # Intentar eliminar el registro solo si pertenece al usuario logueado
-        result = predicciones_col.delete_one({
-            "_id": ObjectId(id),
-            "user_id": current_user_id
-        })
+        result = predicciones_col.delete_one({"_id": ObjectId(id), "user_id": get_jwt_identity()})
+    except Exception:
+        return jsonify({"error": "Identificador inválido"}), 400
+    if result.deleted_count == 0:
+        return jsonify({"error": "No se encontró el registro o no pertenece al usuario"}), 404
+    return jsonify({"message": "Registro eliminado correctamente"})
 
-        if result.deleted_count == 0:
-            return jsonify({"error": "No se encontró el registro o no pertenece al usuario"}), 404
-
-        return jsonify({"message": "Registro eliminado correctamente"}), 200
-
-    except Exception as e:
-        print("Error eliminando registro:", e)
-        return jsonify({"error": "Error al eliminar registro"}), 500
 
 @app.route("/ping-db")
 def ping_db():
     try:
         db.command("ping")
         return jsonify({"message": "Conexión exitosa a MongoDB"})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception as error:
+        return jsonify({"error": str(error)}), 500
 
-# Ejecutar Flask
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
